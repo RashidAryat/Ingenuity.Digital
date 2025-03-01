@@ -1,0 +1,151 @@
+
+/* CTRL + / == COMMENTS CSS */
+/* GLOBAL RULES: START */
+
+:root {
+  --Header--Color: #f0f0f0;
+  --Dark--Color: #070a13;
+  --Light--Color: #f1f5f9;
+  --Slate--Color--400: #94a3b8;
+  --Slate--Color--600: #475569;
+  --Slate--Color--800: #1e293b;
+  --Rose--Color: #e11d48;
+  --Indigo--Color: #4f46e5;
+  --Hover--Color: #3a6cf4;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Main__Header {
+
+  background-color: var(--Header--Color);
+}
+
+.Main__Header__Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 64px;
+}
+
+.Main__Header__Our__Logo__Char {
+  color: var(--Hover--Color);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.Main__Header .Main__Header__Container .Main__Header__Our__Logo__Char:hover {
+  color: var(--Indigo--Color);
+}
+
+.Main__Header .Main__Header__Container .Main__Header__Navigation {
+  display: flex;
+}
+
+.Main__Header .Main__Header__Container .Main__Header__Navigation a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--Hover--Color);
+  padding-left: 32px;
+  padding-right: 32px;
+  transition: 0.3s;
+}
+
+.Main__Header .Main__Header__Container .Main__Header__Navigation a:hover {
+  color: var(--Indigo--Color);
+}
+
+.Main__Header__Navigation__Toggle__Menu {
+  display: flex;
+  color: var(--Dark--Color);
+  font-size: 20px;
+  margin-inline: 8px;
+}
+
+.Main__Header__Container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+
+/* xs */
+@media (max-width: 475px) {
+  .Main__Header .Main__Header__Container .Main__Header__Navigation {
+    display: block;
+    background-color: var(--Header--Color);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .Main__Header .Main__Header__Container .Main__Header__Navigation .Main__Header__Navigation__Menu a {
+    padding: 16px;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .Main__Header .Main__Header__Container .Main__Header__Navigation {
+    display: block;
+    background-color: var(--Header--Color);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .Main__Header .Main__Header__Container .Main__Header__Navigation .Main__Header__Navigation__Menu a {
+    padding: 16px;
+  }
+
+  .Main__Header__Navigation__Toggle__Menu {
+    display: flex;
+  }
+}
+
+/* Laptop Standard - 1024px */
+@media (min-width: 1024px) {
+  .Main__Header__Navigation__Toggle__Menu {
+    display: none;
+  }
+}
