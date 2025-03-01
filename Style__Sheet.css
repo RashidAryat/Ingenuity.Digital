@@ -1,0 +1,157 @@
+:root {
+  --Header--Color:#f0f0f0;
+  --Dark--Color: #070a13;
+  --Rose--Color:#e11d48;
+  --Indigo--Color:#4f46e5;
+  --Hover--Color:#3a6cf4;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Header--Color);
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Section__Home__Test, .Section__About__Test, .Section__Services__Test, .Section__Contact__Test, .Section__Blogs__Test  {
+  margin-top: 64px;
+  text-align: center;
+  padding: 16px;
+  height: 100vh;
+}
+
+
+.Section__Home__Test {
+  background-color: var(--Rose--Color);
+}
+
+.Section__About__Test {
+  background-color: var(--Dark--Color);
+  margin-top: -64px;
+}
+
+.Section__Services__Test {
+  background-color: var(--Indigo--Color);
+  margin-top: -64px;
+}
+
+.Section__Contact__Test {
+  background-color: var(--Header--Color);
+  margin-top: -64px;
+}
+
+.Main__Header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--Indigo--Color);
+}
+
+.Main__Header__Container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  min-height: 64px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Our__Logo_Char {
+  font-size: 1.5rem;
+}
+
+.Main__Header__Burger__Toggle__Icon {
+  display: none;
+  cursor: pointer;
+}
+
+
+.Burger__Toggle__Icon__Bars {
+  display: block;
+  width: 32px;
+  height: 5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+  background-color: var(--Header--Color);
+
+}
+
+.Main__Header__Navigation__Menu {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+
+@media (max-width: 768px) {
+  .Main__Header__Burger__Toggle__Icon {
+    display: block;
+  }
+
+  .Main__Header__Burger__Toggle__Icon.active .Burger__Toggle__Icon__Bars:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .Main__Header__Burger__Toggle__Icon.active .Burger__Toggle__Icon__Bars:nth-child(2) {
+    opacity: 0;
+  }
+
+  .Main__Header__Burger__Toggle__Icon.active .Burger__Toggle__Icon__Bars:nth-child(3) {
+    transform: translateY(-18px) rotate(-45deg);
+  }
+
+  .Main__Header__Navigation__Menu {
+    background-color: var(--Dark--Color);
+    display: block;
+    position: fixed;
+    top: 64px;
+    gap: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0;
+  }
+
+  .Navigation__Links {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+
+  .Main__Header__Navigation__Menu.active {
+    background-color: var(--Indigo--Color);
+    opacity: 100%;
+  }
+}
